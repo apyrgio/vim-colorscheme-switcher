@@ -2,8 +2,11 @@
 
 Change the color scheme from a list of color scheme names.
 
-This is simply a clone of a script found on vim.wikia to make it easy to
-Vundle. Version 2010-09-12 from [vim.wikia][wikia].
+This a fork from the
+[twe4ked/vim-colorscheme-switcher](https://github.com/twe4ked/vim-colorscheme-switcher)
+repo. The main update is the introduction of a more random number generator and
+the inclusion of the user's colorschemes (and not the usage of pre-defined
+ones) by default.
 
 ## Keybindings
 
@@ -27,4 +30,3 @@ You can use the following autocommand to automatically set up your normal colors
 autocmd VimEnter * :silent! SetColors bclear solarized jellybeans
 ```
 
-[wikia]: http://vim.wikia.com/wiki/VimTip341
