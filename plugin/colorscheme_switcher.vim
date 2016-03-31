@@ -70,7 +70,9 @@ function! s:NextColor(how, echo_color)
   let how = a:how
   for i in range(len(s:mycolors))
     if how == 0
-      let current = localtime() % len(s:mycolors)
+      " Random number generator taken from http://stackoverflow.com/a/12739441
+      let random = str2nr(matchstr(reltimestr(reltime()), '\v\.@<=\d+')[1:])
+      let current = random % len(s:mycolors)
       let how = 1  " in case random color does not exist
     else
       let current += how
